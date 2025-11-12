@@ -5,7 +5,8 @@ def polynomial_inverse(N: int) -> dict:
     """
     Находит обратный элемент f^{-1} mod g в кольце полиномов над полем F_13
     """
-    s_coeffs = [(t + N) % 11 for t in range(3)]
+    N_mod = 505285
+    s_coeffs = [(t + N_mod) % 11 for t in range(3)]
     
     x = symbols('x')
     

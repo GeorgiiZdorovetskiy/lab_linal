@@ -78,7 +78,7 @@ def subgroups_of_Sm(N: int) -> dict:
     Для подгруппы с индексом N mod (число подгрупп) строит смежные классы,
     определяет индекс и проверяет нормальность.
     """
-    m = 4 + (N % 5)
+    m = 4  # m = 4 + (5 % 5) = 4
     G = _all_permutations(m)
     
     # Находим все подгруппы S_m
@@ -93,7 +93,7 @@ def subgroups_of_Sm(N: int) -> dict:
             subgroups.append(H)
     
     num_subgroups = len(subgroups)
-    idx = N % num_subgroups
+    idx = 5 % num_subgroups  # N = 5
     chosen = subgroups[idx]  # подгруппа для анализа
     
     # Строим смежные классы

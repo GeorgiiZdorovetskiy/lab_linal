@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
 def is_palindrom(n: int) -> bool:
-    """Проверяет, является ли число палиндромом"""
+    # Проверяет, является ли число палиндромом
     num_str = str(n)
     return num_str == num_str[::-1]
 

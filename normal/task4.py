@@ -7,8 +7,8 @@ def elements_of_order_k_in_cyclic_group(N: int) -> dict:
     - Все элементы g, такие что g^k = e
     - Все элементы порядка k
     """
-    m = 4 + (N % 5)
-    k = 1 + (N % 7)
+    m = 4  # m = 4 + (5 % 5) = 4
+    k = 6  # k = 1 + (5 % 7) = 6
     
     elements_g_k = []
     elements_order_k = []

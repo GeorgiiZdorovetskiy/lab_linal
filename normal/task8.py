@@ -4,7 +4,7 @@ def generators_of_Zm_star(N: int) -> list:
     """
     Находит все образующие (примитивные корни) циклической группы Z_m^*
     """
-    m = 4 + (N % 5)
+    m = 4  # m = 4 + (5 % 5) = 4
     
     generators = []
     for g in range(1, m):

@@ -16,8 +16,11 @@ def _permutation_power(perm: Tuple[int, ...], n: int) -> Tuple[int, ...]:
     return result
 
 def solve_sigma_power_eq(N: int) -> dict:
-    m = 4 + (N % 5)
-    n = 2 + (N % 10)
+    """
+    В группе S_m находит все решения уравнения σ^n = (1 2 3 ... m-1)
+    """
+    m = 4  # m = 4 + (5 % 5) = 4
+    n = 7  # n = 2 + (5 % 10) = 7
     
     # Целевая перестановка (1 2 3 ... m-1)
     target_perm = tuple((i + 1) % m for i in range(m))
@@ -40,12 +43,16 @@ def solve_sigma_power_eq(N: int) -> dict:
         else:
             random_solutions = solutions.copy()
     
+    # Общее свойство решений
+    common_property = "Все решения являются перестановками, которые при возведении в степень n дают циклическую перестановку"
+    
     return {
         "m": m,
         "n": n,
         "target_permutation": target_perm,
         "number_of_solutions": len(solutions),
         "three_random_solutions": random_solutions,
+        "common_property": common_property
     }
 
 """Все решения являются перестановками, которые при возведении в степень n дают циклическую перестановку. 

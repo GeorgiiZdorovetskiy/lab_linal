@@ -7,8 +7,9 @@ def polynomial_factorization(N: int) -> dict:
     - f(x) = x^5 + ∑ c_i x^i в F_5[x]
     - f(x) = x^4 + ∑ d_i x^i в F_9[x]
     """
-    c_coeffs = [(k + N) % 5 for k in range(6)]
-    d_coeffs = [(l + N) % 9 for l in range(5)]
+    N_mod = 505285
+    c_coeffs = [(k + N_mod) % 5 for k in range(6)]
+    d_coeffs = [(l + N_mod) % 9 for l in range(5)]
     
     x = symbols('x')
     

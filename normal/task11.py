@@ -8,8 +8,9 @@ def polynomial_roots(N: int) -> dict:
     - f(x) = x^9 + ∑ a_i x^i в F_4[x]
     - f(x) = ∑ b_i x^i в F_7[x]
     """
-    a_coeffs = [(i + N) % 4 for i in range(9)]
-    b_coeffs = [(j + N) % 7 for j in range(7)]
+    N_mod = 505285
+    a_coeffs = [(i + N_mod) % 4 for i in range(9)]
+    b_coeffs = [(j + N_mod) % 7 for j in range(7)]
     
     x = symbols('x')
     

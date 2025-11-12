@@ -6,8 +6,9 @@ def polynomial_gcd(N: int) -> dict:
     Находит НОД полиномов f и g и его линейное представление:
     gcd(f,g) = u(x)f(x) + v(x)g(x)
     """
-    r_coeffs = [(m + N) % 11 for m in range(8)]
-    s_coeffs = [(t + N) % 11 for t in range(4)]
+    N_mod = 505285
+    r_coeffs = [(m + N_mod) % 11 for m in range(8)]
+    s_coeffs = [(t + N_mod) % 11 for t in range(4)]
     
     x = symbols('x')
     
